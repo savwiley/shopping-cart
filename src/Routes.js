@@ -14,3 +14,9 @@ const Routes = () => {
 }
 
 export default Routes;
+
+
+/**
+ * home page can be App
+ * import Cart & Product
+ */
