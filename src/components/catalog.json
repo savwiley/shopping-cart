@@ -1,8 +1,87 @@
-what are we selling
-
-clothing?
-  star wars/trek/nerd stuff
-comics (meh)
-games (also meh)
-  board games???
-cosmetics/makeup/nerdy makeup
+[
+  {
+    "product": "Attack on Titan Earrings",
+    "price": 11.99,
+    "desc": "",
+    "category": "jewelry",
+    "image": "./images/aotearring.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Avengers Red/Black Leggings",
+    "price": 12.95,
+    "desc": "",
+    "category": "apparel",
+    "image": "./images/avengersleggings.jpg",
+    "alt-image": "./images/avengersleggings2.jpg"
+  } , {
+    "product": "Deadpool Makeup Bags",
+    "price": 21.99,
+    "desc": "",
+    "category": "cosmetics",
+    "image": "./images/deadpoolbags.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Doctor Who Long Sleeve Shirt",
+    "price": 22.99,
+    "desc": "",
+    "category": "apparel",
+    "image": "./images/docwholongsleeve.jpg",
+    "alt-image": ""
+  } , {
+    "product": "The Flash Ring",
+    "price": 14.88,
+    "desc": "",
+    "category": "jewelry",
+    "image": "./images/flashring.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Marvel Infinity Eyeshadow Collection",
+    "price": 17.00,
+    "desc": "from Her Universe",
+    "category": "cosmetics",
+    "image": "./images/infinityeyeshadow.jpg",
+    "alt-image": "./images/infinityeyeshadow2.jpg"
+  } , {
+    "product": "The Mandalorian Beanie Hat",
+    "price": 21.99,
+    "desc": "",
+    "category": "apparel",
+    "image": "./images/mandohat.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Sailor Moon Daylight Lip Bundle",
+    "price": 22.00,
+    "desc": "from Sailor Moon x ColorPOP",
+    "category": "cosmetics",
+    "image": "./images/sailormoonlip.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Star Wars Charm Bracelet",
+    "price": 19.88,
+    "desc": "",
+    "category": "jewelry",
+    "image": "./images/starwarsbracelet.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Star Wars Makeup Brush Set",
+    "price": 12.99,
+    "desc": "",
+    "category": "cosmetics",
+    "image": "./images/starwarsbrushes.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Thor Helmet Necklace",
+    "price": 35.00,
+    "desc": "",
+    "category": "jewelry",
+    "image": "./images/thornecklace.jpg",
+    "alt-image": ""
+  } , {
+    "product": "Wonder Woman Bomber Jacket",
+    "price": 39.99,
+    "desc": "",
+    "category": "apparel",
+    "image": "./images/wwjacket.jpg",
+    "alt-image": "./images/wwjacket2.jpg"
+  }
+]
