@@ -4,7 +4,7 @@
     "price": 11.99,
     "desc": "",
     "category": "jewelry",
-    "image": "./images/aotearring.jpg",
+    "image": "aotearring",
     "alt-image": ""
   } , {
     "product": "Avengers Red/Black Leggings",
