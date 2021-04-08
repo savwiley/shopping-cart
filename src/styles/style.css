@@ -1,5 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Roboto&display=swap');
 
+:root {
+  --header: 'Josefin Sans', sans-serif;
+
+  --gray: #6e6e6e;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+.navBar {
+  display: block;
+  background: #fff;
+  border-bottom: 2px solid #000;
+  width: 99vw;
+  padding: 15px 10px 10px;
+  position: fixed;
+}
+
+#brand {
+  display: inline-block;
+}
+#brand a {
+  font-family: var(--header);
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+}
+
+#menu {
+  float: right;
+  padding-right: 20px;
+}
+#menu a {
+  margin: 0 10px;
+  font-family: var(--header);
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  padding: 5px;
+  transition: all 0.2s;
+}
+#menu a:hover {
+  background: var(--gray);
+  color: #fff;
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 2px solid var(--gray);
+  position: inherit;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: var(--gray);
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  cursor: default;
+}
+
+/* MAIN HEADER - https://www.pexels.com/photo/woman-in-yellow-and-black-sleeveless-shirt-wearing-black-and-white-cap-4389987/ */
+
+.header {
+  background: url("../images/pexels-darlene-alderson-4389987.jpg") 20% 20%/cover;
+  background-repeat: no-repeat;
+  width: 90vw;
+  height: 70vh;
+  margin: 80px auto;
+}
+
+#blurb {
+  color: #fff;
+  position: relative;
+  top: 40%;
+  left: 10%;
+  overflow: visible;
+  font-size: 20px;
+  cursor: default;
+}
+#head {
+  display: block;
+  font-family: var(--header);
+  font-size: 80px;
+  margin-left: -60px;
+}
+
 /*
 Items almost grayscale before (quickly) full color on hover
   full color on mobile
