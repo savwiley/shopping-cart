@@ -1,9 +1,21 @@
 import React from "react";
+import NavBar from "./components/navBar.js";
+import Footer from "./components/footer.js";
 
 function App() {
   return (
     <div className="main">
-    
+
+      <NavBar />
+
+      <div className="header">
+        <div id="blurb">
+          <span id="head">Girl Wonder</span>
+          <span>Fasion For Us</span>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
