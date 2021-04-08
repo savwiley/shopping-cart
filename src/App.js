@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
+import Items from "./components/itemPage.js";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
           <span id="head">Girl Wonder</span>
           <span>Fasion For Us</span>
         </div>
+      </div>
+
+      <div id="product-section">
+        <Items />
       </div>
 
       <Footer />
