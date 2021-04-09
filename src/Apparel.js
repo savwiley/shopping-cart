@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
-import ApparelLogic from "./components/apparelLogic.js";
+import FilterLogic from "./components/filterLogic.js";
 
 const Apparel = () => {
 
@@ -10,7 +10,7 @@ const Apparel = () => {
       <NavBar />
 
       <div id="product-section" className="subsection">
-        <ApparelLogic />
+        <FilterLogic filter={"apparel"} />
       </div>
 
       <Footer />
