@@ -10,9 +10,9 @@ const NavBar = () => {
       </div>
 
       <div id="menu">
-        <a href="url">Apparel</a>
-        <a href="url">Jewelry</a>
-        <a href="url">Cosmetics</a>
+        <a href="/Apparel">Apparel</a>
+        <a href="/Jewelry">Jewelry</a>
+        <a href="/Cosmetics">Cosmetics</a>
         <a href="url">Checkout</a>
       </div>
     </div>
