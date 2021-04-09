@@ -60,6 +60,7 @@
 
 .footer {
   border-top: 2px solid var(--gray);
+  background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -78,7 +79,7 @@
   background: url("../images/pexels-darlene-alderson-4389987.jpg") 20% 20%/cover;
   background-repeat: no-repeat;
   width: 90vw;
-  height: 70vh;
+  height: 85vh;
   margin: 80px auto;
 }
 
