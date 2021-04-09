@@ -1,5 +1,6 @@
 import React from "react";
 import Catalog from "./catalog.json";
+import aotearring from "../images/aotearring.jpg";
 
 const Items = (props) => {
   const { filter } = props;
@@ -35,7 +36,7 @@ const Items = (props) => {
             <div 
             id="item-image"
             style={{
-              backgroundImage: `url(${e.image})`,
+              backgroundImage: `url(https://raw.githubusercontent.com/savwiley/shopping-cart/master/src/images/${e.image}.jpg)`,
               backgroundPosition: "center",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
@@ -67,4 +68,11 @@ export default Items;
  * 
  * OR this is the individual item blocks on the store front
  * OR the blocks as a whole
+ * 
+ * 
+ * 
+ * 
+ * FOR THE IMAGES
+ * 
+ * perhaps I can create a variable that changes with if statments, like the filtering arrays. but that would be a lot of if statements...
  */
