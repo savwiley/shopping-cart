@@ -4,7 +4,7 @@
     "price": 11.99,
     "desc": "",
     "category": "jewelry",
-    "image": "/static/media/aotearring.f31e9495.jpg",
+    "image": "aotearring",
     "alt-image": "",
     "key": "aotearring"
   } , {
@@ -12,7 +12,7 @@
     "price": 12.95,
     "desc": "",
     "category": "apparel",
-    "image": "/static/media/avengersleggings.dfb3d54f.jpg",
+    "image": "avengersleggings",
     "alt-image": "./images/avengersleggings2.jpg",
     "key": "avengersleggings"
   } , {
@@ -20,7 +20,7 @@
     "price": 21.99,
     "desc": "",
     "category": "cosmetics",
-    "image": "/static/media/deadpoolbags.1f9de889.jpg",
+    "image": "deadpoolbags",
     "alt-image": "",
     "key": "deadpoolbags"
   } , {
@@ -28,7 +28,7 @@
     "price": 22.99,
     "desc": "",
     "category": "apparel",
-    "image": "/static/media/docwholongsleeve.1c1b458f.jpg",
+    "image": "docwholongsleeve",
     "alt-image": "",
     "key": "docwholongsleeve"
   } , {
@@ -36,7 +36,7 @@
     "price": 14.88,
     "desc": "",
     "category": "jewelry",
-    "image": "/static/media/flashring.1d98a6d1.jpg",
+    "image": "flashring",
     "alt-image": "",
     "key": "flashring"
   } , {
@@ -44,7 +44,7 @@
     "price": 17.00,
     "desc": "from Her Universe",
     "category": "cosmetics",
-    "image": "/static/media/infinityeyeshadow.2b14bfb4.jpg",
+    "image": "infinityeyeshadow",
     "alt-image": "./images/infinityeyeshadow2.jpg",
     "key": "infinityeyeshadow"
   } , {
@@ -52,7 +52,7 @@
     "price": 21.99,
     "desc": "",
     "category": "apparel",
-    "image": "/static/media/mandohat.5fb2bfcb.jpg",
+    "image": "mandohat",
     "alt-image": "",
     "key": "mandohat"
   } , {
@@ -60,7 +60,7 @@
     "price": 22.00,
     "desc": "from Sailor Moon x ColorPOP",
     "category": "cosmetics",
-    "image": "/static/media/sailormoonlip.045715da.jpg",
+    "image": "sailormoonlip",
     "alt-image": "",
     "key": "sailormoonlip"
   } , {
@@ -68,7 +68,7 @@
     "price": 19.88,
     "desc": "",
     "category": "jewelry",
-    "image": "/static/media/starwarsbracelet.71d41d9c.jpg",
+    "image": "starwarsbracelet",
     "alt-image": "",
     "key": "starwarsbracelet"
   } , {
@@ -76,7 +76,7 @@
     "price": 12.99,
     "desc": "",
     "category": "cosmetics",
-    "image": "/static/media/starwarsbrushes.cc099856.jpg",
+    "image": "starwarsbrushes",
     "alt-image": "",
     "key": "starwarsbrushes"
   } , {
@@ -84,7 +84,7 @@
     "price": 35.00,
     "desc": "",
     "category": "jewelry",
-    "image": "/static/media/thornecklace.3e3e6851.jpg",
+    "image": "thornecklace",
     "alt-image": "",
     "key": "thornecklace"
   } , {
@@ -92,7 +92,7 @@
     "price": 39.99,
     "desc": "",
     "category": "apparel",
-    "image": "/static/media/wwjacket.7be63266.jpg",
+    "image": "wwjacket",
     "alt-image": "./images/wwjacket2.jpg",
     "key": "wwjacket"
   }
