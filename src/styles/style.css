@@ -4,12 +4,17 @@
   --header: 'Josefin Sans', sans-serif;
 
   --gray: #6e6e6e;
+  --orange: #bd4c0a;
 }
 
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   overflow-x: hidden;
+}
+
+.main {
+  position: relative;
 }
 
 /* NAVBAR */
@@ -55,10 +60,10 @@
 
 .footer {
   border-top: 2px solid var(--gray);
-  position: inherit;
+  position: absolute;
   bottom: 0;
-  right: 0;
   left: 0;
+  right: 0;
   color: var(--gray);
   text-align: center;
   padding: 10px;
@@ -98,6 +103,12 @@
 #product-section {
   display: block;
   text-align: center;
+  margin-bottom: 50px;
+  overflow: clip;
+}
+
+.subsection {
+  margin-top: 100px;
 }
 
 .item-block {
@@ -105,13 +116,40 @@
   width: 300px;
   height: 400px;
   margin: 5px;
-  border: 1px solid;
+  box-shadow: 2px 2px 4px var(--gray);
+}
+.item-block span {
+  display: block;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.item-block:hover #item-name {
+  background: var(--gray);
+  color: #fff;
 }
 
 #item-image {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
+  margin: 10px auto 0;
 }
+.item-block:hover #item-image{
+  background-size: cover !important;
+}
+
+#item-name {
+  color: #000;
+  font-size: 18px;
+  margin: 20px 0;
+  transition: all 0.2s;
+}
+
+#item-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--orange);
+}
+
 
 /*
 Items almost grayscale before (quickly) full color on hover
