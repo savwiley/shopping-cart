@@ -72,7 +72,10 @@ export default Items;
  * 
  * 
  * 
- * FOR THE IMAGES
+ * FOR THE LINKS
  * 
- * perhaps I can create a variable that changes with if statments, like the filtering arrays. but that would be a lot of if statements...
+ * I'm thinking use e.image for it (put the link inside the map, ofc).
+ * In Routes, import Catalog so we can use the same method?
+ * 
+ * but... the product page....... how do i do that part?
  */
