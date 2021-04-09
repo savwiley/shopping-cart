@@ -1,12 +1,32 @@
 import React from "react";
 import Catalog from "./catalog.json";
 
-const Items = () => {
+const Items = (props) => {
+  const { filter } = props;
+
+  let products = [];
+
+  if (filter === "apparel"){
+    const arr = Catalog.filter(e => e.category === "apparel");
+    products = [];
+    products.push(arr);
+  } else if (filter === "jewelry"){
+    const arr = Catalog.filter(e => e.category === "jewelry");
+    products = [];
+    products.push(arr);
+  } else if (filter === "cosmetics"){
+    const arr = Catalog.filter(e => e.category === "cosmetics");
+    products = [];
+    products.push(arr);
+  } else if (filter === "all") {
+    products = [];
+    products.push(Catalog);
+  }
 
   return (
     <a href="URL">
       <div className="products">
-        {Catalog.map((e) => (
+        {products[0].map((e) => (
           <div
           className="item-block"
           id={e.category}
