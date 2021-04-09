@@ -1,34 +1,36 @@
 import React from "react";
 import Catalog from "./catalog.json";
-import aotearring from "../images/aotearring.jpg";
 
 const Items = () => {
 
-  console.log(typeof(aotearring))
-  console.log(typeof(Catalog[0].image))
-
   return (
-    <div className="products">
-      {Catalog.map((e) => (
-        <div
-        className="item-block"
-        id={e.category}
-        key={e.product}
-        >
-          <div 
-          id="item-image"
-          style={{
-            backgroundImage: `url(${e.image})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}>
-            image
+    <a href="URL">
+      <div className="products">
+        {Catalog.map((e) => (
+          <div
+          className="item-block"
+          id={e.category}
+          key={e.product}
+          >
+            <div 
+            id="item-image"
+            style={{
+              backgroundImage: `url(${e.image})`,
+              backgroundPosition: "center",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}>
+            </div>
+            <span id="item-name">
+              {e.product}
+            </span>
+            <span id="item-price">
+              ${e.price}
+            </span>
           </div>
-          {e.product}
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </a>
   )
 }
 
