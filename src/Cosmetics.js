@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
-import FilterLogic from "./components/filterLogic.js";
+import Items from "./components/itemPage.js";
 
 const Cosmetics = () => {
 
@@ -10,7 +10,7 @@ const Cosmetics = () => {
       <NavBar />
 
       <div id="product-section" className="subsection">
-        <FilterLogic filter={"cosmetics"} />
+        <Items filter={"cosmetics"} />
       </div>
 
       <Footer />

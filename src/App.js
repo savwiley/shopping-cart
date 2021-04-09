@@ -17,7 +17,7 @@ function App() {
       </div>
 
       <div id="product-section">
-        <Items />
+        <Items filter={"all"}/>
       </div>
 
       <Footer />
