@@ -4,6 +4,7 @@ import App from "./App.js";
 import Apparel from "./Apparel.js";
 import Jewelry from "./Jewelry.js";
 import Cosmetics from "./Cosmetics.js";
+import Product from "./Product.js";
 //import pages
 
 const Routes = () => {
@@ -14,6 +15,7 @@ const Routes = () => {
         <Route exact path="/Apparel" component={Apparel} />
         <Route exact path="/Jewelry" component={Jewelry} />
         <Route exact path="/Cosmetics" component={Cosmetics} />
+        <Route exact path="/:id" children={<Product />} />
       </Switch>
     </BrowserRouter>
   )
