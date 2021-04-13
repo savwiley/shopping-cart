@@ -10,11 +10,11 @@
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  overflow-x: hidden;
 }
 
 .main {
   position: relative;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -26,6 +26,7 @@
   width: 99vw;
   padding: 15px 10px 10px;
   position: fixed;
+  top: 0;
 }
 
 #brand {
@@ -149,6 +150,80 @@
   font-weight: bold;
   font-size: 20px;
   color: var(--orange);
+}
+
+/* PRODUCT PAGE */
+
+.prodMain {
+  width: 95vw;
+  margin: 80px auto 0;
+  display: flex;
+  flex-direction: row;
+  overflow: visible !important;
+}
+
+#prodImage {
+  align-self: flex-end;
+  box-shadow: 2px 2px 4px var(--gray);
+  height: 30vw;
+  max-height: 400px;
+  width: 30vw;
+  max-width: 350px;
+  border: 10px solid transparent;
+  margin-right: 40px;
+}
+#prodImage:hover {
+  background-size: cover !important;
+}
+
+#prodInfo {
+  margin: 100px auto 0;
+  width: 40vw;
+  cursor: default;
+}
+
+#prodName {
+  font-family: var(--header);
+  font-size: 50px;
+  display: block;
+  margin: 0 0 10px -30px;
+}
+
+#prodDesc {
+  margin-bottom: 10px;
+  display: block;
+  max-width: 500px;
+  text-align: justify;
+}
+
+#prodPrice {
+  font-size: 30px;
+  color: var(--orange);
+}
+
+.quantity {
+  margin: 20px 0;
+}
+
+.quantity input {
+  font-size: 20px;
+  margin: 0 10px;
+  width: 80px;
+  border: 1px solid var(--gray);
+  border-radius: 3px;
+}
+
+.quantity button {
+  font-size: 20px;
+  width: 50px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+.quantity button:hover {
+  background: var(--gray);
+  color: #fff;
 }
 
 
