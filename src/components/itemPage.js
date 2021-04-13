@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Catalog from "./catalog.json";
-import aotearring from "../images/aotearring.jpg";
 
 const Items = (props) => {
   const { filter } = props;
@@ -25,9 +25,9 @@ const Items = (props) => {
   }
 
   return (
-    <a href="URL">
-      <div className="products">
-        {products[0].map((e) => (
+    <div className="products">
+      {products[0].map((e) => (
+        <Link to={e.link}>
           <div
           className="item-block"
           id={e.category}
@@ -36,10 +36,10 @@ const Items = (props) => {
             <div 
             id="item-image"
             style={{
-              backgroundImage: `url(https://raw.githubusercontent.com/savwiley/shopping-cart/master/src/images/${e.image}.jpg)`,
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
+                backgroundImage: `url(https://raw.githubusercontent.com/savwiley/shopping-cart/master/src/images/${e.image}.jpg)`,
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
             }}>
             </div>
             <span id="item-name">
@@ -49,9 +49,9 @@ const Items = (props) => {
               ${e.price}
             </span>
           </div>
-        ))}
-      </div>
-    </a>
+        </Link>
+      ))}
+    </div>
   )
 }
 
@@ -78,4 +78,7 @@ export default Items;
  * In Routes, import Catalog so we can use the same method?
  * 
  * but... the product page....... how do i do that part?
+ * 
+ * 
+ * The instructions imply that I shouldn't worry about this step. Instead, I should have the counters/cart btns on the item boxes themselves instead of a separate page. Plus a counter in the navBar to show how much stuff is in the cart.
  */
