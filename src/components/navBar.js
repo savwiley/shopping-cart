@@ -13,12 +13,15 @@ const NavBar = () => {
         <a href="/Apparel">Apparel</a>
         <a href="/Jewelry">Jewelry</a>
         <a href="/Cosmetics">Cosmetics</a>
-        <a href="url">Checkout</a>
+        <a href="/Cart">Checkout</a>
       </div>
     </div>
   )
 }
 
+/**
+ * add cart qty to Checkout
+ */
 
 
 export default NavBar;
