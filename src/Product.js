@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Catalog from "./components/catalog.json";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
+import CartBtn from "./components/cartBtn";
 
 const Product = () => {
   let { id } = useParams();
+  const quant = useRef(1);
 
   //brings up correct product using params
   const filterArr = (image) => {
@@ -18,7 +20,6 @@ const Product = () => {
     return filterArr(e.image);
   });
 
-
   useEffect(() => {
     const input = document.querySelector("#inputQ");
     const add = document.querySelector("#addBtn");
@@ -26,7 +27,6 @@ const Product = () => {
     let numb = 1;
 
     const changeQuant = (dom) => {
-
       if (input && dom === "change") {
         numb = Number(input.value);
       } else if (add && dom === "add") {
@@ -37,9 +37,10 @@ const Product = () => {
         };
       };
 
-      input.value = numb;
+      quant.current = numb;
+      input.value = quant.current;
     }
-
+    
     input.addEventListener("change", () => {
       changeQuant("change");
     });
@@ -49,7 +50,7 @@ const Product = () => {
     sub.addEventListener("click", () => {
       changeQuant("sub");
     });
-  });
+  }, []);
 
    /**
     * add to cart
@@ -97,8 +98,7 @@ const Product = () => {
                 <button id="addBtn">+</button>
               </div>
 
-                {//quantities & cart add
-                }
+              <CartBtn item={e} qty={quant} />
 
             </div>
           </div>
