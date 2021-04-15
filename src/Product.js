@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import Catalog from "./components/catalog.json";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
-import CartBtn from "./components/cartBtn";
+//import CartBtn from "./components/cartBtn";
+//import Routes from "./Routes";
 
-const Product = () => {
+const Product = ({ addToCart }) => {
   let { id } = useParams();
   const quant = useRef(1);
 
@@ -52,15 +53,19 @@ const Product = () => {
     });
   }, []);
 
-   /**
-    * add to cart
-    * 
-    * We need to send the item & quantity to the cart and set item(s)/total quantity on the header.
-    * 
-    * Perhaps there's another file, maybe a json, with a big array that includes all of the cart items. Some sort of class so we can easily add and remove things.
-    * 
-    * We could use props maybe? to send e.image/key & quant? Buuuut I'm not sure how we'd keep track. It's going to have to be some sort of array thing, I think.
-    */
+  useEffect(() => {
+    const btn = document.querySelector(".addCart");
+
+    const addCart = (item, qty) => {
+      addToCart(item, qty);
+    }
+
+    if (btn) {
+      btn.addEventListener("click", () => {
+        addCart(product, quant)
+      })
+    }
+  })
 
 
   return (
@@ -98,7 +103,10 @@ const Product = () => {
                 <button id="addBtn">+</button>
               </div>
 
-              <CartBtn item={e} qty={quant} />
+              <button
+                className="addCart">
+                  Add to Cart
+              </button>
 
             </div>
           </div>
