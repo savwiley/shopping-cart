@@ -6,20 +6,29 @@ import Jewelry from "./Jewelry.js";
 import Cosmetics from "./Cosmetics.js";
 import Product from "./Product.js";
 import Cart from "./Cart.js";
+import Catalog from "./components/catalog.json";
 //import pages
 
 const Routes = () => {
-  let list = [];
+  let cart = [];
 
   const addToCart = (item, qty) => {
-    list.push({
-      product: item[0].product, 
-      price: item[0].price,
-      image: item[0].image,
-      link: item[0].link,
-      quant: qty.current
-    })
-    console.log(list);
+    const prod = Catalog.filter(e => e.image === item[0].image);
+
+    if (cart.find(e => e.image === prod[0].image)) {
+      //if item is already in the cart, this changes just the quantity
+      let newProd = [...cart];
+      let prodIndex = cart.findIndex(e => e.image === prod[0].image);
+
+      newProd[prodIndex] = {...newProd[prodIndex], quant: qty.current};
+
+      cart = newProd;
+    } else {
+      //if item isn't in the cart, this adds it
+      prod[0].cart = true;
+      prod[0].quant = qty.current;
+      cart.push(prod[0])
+    }
   }
 
   return (
@@ -30,7 +39,7 @@ const Routes = () => {
         <Route exact path="/Jewelry" component={Jewelry} />
         <Route exact path="/Cosmetics" component={Cosmetics} />
         <Route exact path="/Cart" render={() => (
-          <Cart list={list} />
+          <Cart cart={cart} />
         )} />
         <Route exact path="/:id" render={() => (
           <Product addToCart={addToCart} />
