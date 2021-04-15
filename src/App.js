@@ -2,8 +2,12 @@ import React from "react";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
 import Items from "./components/itemPage.js";
+//import Routes from "./Routes.js";
+
 
 function App() {
+  
+
   return (
     <div className="main">
 
