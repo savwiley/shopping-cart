@@ -53,7 +53,7 @@
   {
     "product": "Marvel Infinity Eyeshadow Collection",
     "price": 16.99,
-    "desc": "from Her Universe",
+    "desc": "From Her Universe",
     "category": "cosmetics",
     "image": "infinityeyeshadow",
     "alt-image": "./images/infinityeyeshadow2.jpg",
@@ -74,7 +74,7 @@
   {
     "product": "Sailor Moon Daylight Lip Bundle",
     "price": 21.99,
-    "desc": "from Sailor Moon x ColorPOP",
+    "desc": "From Sailor Moon x ColorPOP",
     "category": "cosmetics",
     "image": "sailormoonlip",
     "link": "/sailormoonlip",
