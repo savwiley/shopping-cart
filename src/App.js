@@ -4,6 +4,9 @@ import Footer from "./components/footer.js";
 import Items from "./components/itemPage.js";
 
 function App(cart) {
+  //always opens to top of page
+  window.scrollTo(0, 0);
+
   return (
     <div className="main">
       <NavBar cart={cart.cart} />
@@ -40,4 +43,13 @@ On your shopping cart route, a user should see a sticky bar (it can be just a to
 Build individual card items for each of your products. Display an input field on it, which lets a user manually type in how many items they want to buy. Also, add an increment and decrement button next to it for fine-tuning. You can also display a title for each product as well as an “Add To Cart” button.
 
 Once a user has submitted their order, the amount on the cart itself should adjust.
+ */
+
+/**
+ * TODOS
+ *
+ * create README
+ * create LICENSE
+ * install gh-pages
+ * deploy
  */
