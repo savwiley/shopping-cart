@@ -430,11 +430,11 @@ input {
   }
   .prod-image {
     margin: auto;
-    width: 90vw;
+    width: 350px;
     height: 80vh;
   }
   #prodImage {
-    width: 100%;
+    width: auto;
     height: 100%;
   }
   #prodInfo {
@@ -448,8 +448,12 @@ input {
     font-size: 30px;
     margin-left: 0;
   }
+  #prodDesc {
+    text-align: center;
+    margin: 0 auto 20px;
+  }
   .goCheckout {
-    margin: 20px auto;
+    margin: 20px auto 80px;
   }
   #cart-name {
     display: block;
