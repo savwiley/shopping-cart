@@ -1,20 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Roboto&display=swap");
 
 :root {
-  --header: 'Josefin Sans', sans-serif;
+  --header: "Josefin Sans", sans-serif;
 
   --gray: #6e6e6e;
+  --grayer: #525252;
   --orange: #bd4c0a;
+  --red: #bd0a37;
+
+  --darkO: rgba(0, 0, 0, 0.4);
+  --lightO: rgba(255, 255, 255, 0.7);
+  --orangeO: rgb(189, 76, 10, 0.5);
+  --redO: rgb(189, 10, 55, 0.5);
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
 .main {
   position: relative;
+  min-height: 100vh;
   overflow-x: hidden;
+  background: linear-gradient(180deg, transparent, var(--orangeO), var(--redO));
+  background-attachment: fixed;
 }
 
 /* NAVBAR */
@@ -43,8 +53,12 @@
   float: right;
   padding-right: 20px;
 }
+#menu span {
+  font-family: var(--header);
+}
 #menu a {
-  margin: 0 10px;
+  margin: 0 5px;
+  font-size: 18px;
   font-family: var(--header);
   text-decoration: none;
   color: #000;
@@ -60,24 +74,32 @@
 /* FOOTER */
 
 .footer {
-  border-top: 2px solid var(--gray);
+  border-top: 2px solid #000;
   background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  color: var(--gray);
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   margin-top: 20px;
-  font-size: 12px;
   cursor: default;
+}
+
+.footer a {
+  color: var(--gray);
+  font-size: 28px;
+}
+
+.footer a:hover {
+  color: #000;
 }
 
 /* MAIN HEADER - https://www.pexels.com/photo/woman-in-yellow-and-black-sleeveless-shirt-wearing-black-and-white-cap-4389987/ */
 
 .header {
-  background: url("../images/pexels-darlene-alderson-4389987.jpg") 20% 20%/cover;
+  background: url("../images/pexels-darlene-alderson-4389987.jpg") 20% 20% /
+    cover;
   background-repeat: no-repeat;
   width: 90vw;
   height: 85vh;
@@ -116,9 +138,10 @@
 .item-block {
   display: inline-block;
   width: 300px;
-  height: 400px;
+  height: 380px;
   margin: 5px;
-  box-shadow: 2px 2px 4px var(--gray);
+  box-shadow: 2px 2px 6px var(--darkO);
+  background: linear-gradient(180deg, #fff 70%, var(--lightO));
 }
 .item-block span {
   display: block;
@@ -126,30 +149,41 @@
   cursor: pointer;
 }
 .item-block:hover #item-name {
-  background: var(--gray);
+  background: var(--darkO);
   color: #fff;
+}
+
+.imageBorder {
+  width: 250px;
+  height: 250px;
+  margin: 10px auto 0;
+  overflow: hidden;
 }
 
 #item-image {
   width: 250px;
   height: 250px;
-  margin: 10px auto 0;
 }
-.item-block:hover #item-image{
-  background-size: cover !important;
+.item-block:hover #item-image {
+  transform: scale(1.5);
 }
 
 #item-name {
   color: #000;
   font-size: 18px;
   margin: 20px 0;
+  padding-top: 8px;
+  font-family: var(--header);
+  font-weight: bold;
   transition: all 0.2s;
 }
 
 #item-price {
   font-weight: bold;
-  font-size: 20px;
+  font-family: var(--header);
+  font-size: 25px;
   color: var(--orange);
+  text-shadow: 1px 1px 0px #000;
 }
 
 /* PRODUCT PAGE */
@@ -159,21 +193,30 @@
   margin: 80px auto 0;
   display: flex;
   flex-direction: row;
+  min-height: 73vh;
   overflow: visible !important;
 }
 
+.prod-image {
+  align-self: center;
+  box-shadow: 2px 2px 4px var(--darkO);
+  height: 30vw;
+  max-height: 400px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
 #prodImage {
-  align-self: flex-end;
-  box-shadow: 2px 2px 4px var(--gray);
+  background: #fff;
   height: 30vw;
   max-height: 400px;
   width: 30vw;
   max-width: 350px;
   border: 10px solid transparent;
-  margin-right: 40px;
+  border-top: none;
 }
 #prodImage:hover {
-  background-size: cover !important;
+  transform: scale(1.5);
 }
 
 #prodInfo {
@@ -197,8 +240,10 @@
 }
 
 #prodPrice {
+  font-family: var(--header);
   font-size: 30px;
-  color: var(--orange);
+  color: #fff;
+  text-shadow: 1px 1px 0px #000;
 }
 
 .quantity {
@@ -209,33 +254,105 @@
   font-size: 20px;
   margin: 0 10px;
   width: 80px;
-  border: 1px solid var(--gray);
+  border: none;
   border-radius: 3px;
+  outline: none;
 }
 
 .quantity button {
   font-size: 20px;
-  width: 50px;
+  background: #fff;
+  width: 28px;
   border: none;
   border-radius: 50px;
   outline: none;
   cursor: pointer;
+  outline: none;
 }
 .quantity button:hover {
-  background: var(--gray);
+  background: var(--darkO);
   color: #fff;
 }
 
+.addCart {
+  font-family: var(--header);
+  font-weight: bold;
+  padding-top: 7px;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.addCart:hover {
+  background: var(--darkO);
+  color: #fff;
+}
+
+/* CART */
+
+.cart-block {
+  background: #fff;
+  width: 98vw;
+  min-height: 104px;
+  margin: auto;
+  text-align: left;
+  border-bottom: 2px solid var(--gray);
+  cursor: default;
+}
+
+#cart-image {
+  height: 100px;
+  width: 100px;
+  background: #fff;
+  float: left;
+  margin: 2px 0 2px 2px;
+}
+
+#cart-name {
+  display: inline-block;
+  padding: 40px 5px 0;
+  font-family: var(--header);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#cart-price {
+  display: inline-block;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 40px;
+  right: 100px;
+}
+
+#priceTotal {
+  font-family: var(--header);
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow: 2px 2px 0px var(--lightO);
+  cursor: default;
+}
+
+#checkoutBtn {
+  display: block;
+  margin: 20px auto;
+  font-family: var(--header);
+  font-weight: bold;
+  padding: 7px 10px 0;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+#checkoutBtn:hover {
+  background: var(--darkO);
+  color: #fff;
+}
 
 /*
-Items almost grayscale before (quickly) full color on hover
-  full color on mobile
-Full width header image with navbar above it
-  navbar is sticky on every page
-Color scheme is simple off-white, dark-grey
-
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
-
 MAKE IT MOBILE FRIENDLY
 */
