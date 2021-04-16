@@ -5,11 +5,11 @@
     "desc": "A really long description goes here.",
     "category": "jewelry",
     "image": "aotearring",
-    "alt-image": "",
     "link": "/aotearring",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Avengers Red/Black Leggings",
     "price": 12.95,
     "desc": "",
@@ -19,37 +19,38 @@
     "link": "/avengersleggings",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Deadpool Makeup Bags",
     "price": 21.99,
     "desc": "",
     "category": "cosmetics",
     "image": "deadpoolbags",
-    "alt-image": "",
     "link": "/deadpoolbags",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Doctor Who Long Sleeve Shirt",
     "price": 22.99,
     "desc": "",
     "category": "apparel",
     "image": "docwholongsleeve",
-    "alt-image": "",
     "link": "/docwholongsleeve",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "The Flash Ring",
     "price": 14.88,
     "desc": "",
     "category": "jewelry",
     "image": "flashring",
-    "alt-image": "",
     "link": "/flashring",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Marvel Infinity Eyeshadow Collection",
     "price": 16.99,
     "desc": "from Her Universe",
@@ -59,57 +60,58 @@
     "link": "/infinityeyeshadow",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "The Mandalorian Beanie Hat",
     "price": 21.99,
     "desc": "",
     "category": "apparel",
     "image": "mandohat",
-    "alt-image": "",
     "link": "/mandohat",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Sailor Moon Daylight Lip Bundle",
     "price": 21.99,
     "desc": "from Sailor Moon x ColorPOP",
     "category": "cosmetics",
     "image": "sailormoonlip",
-    "alt-image": "",
     "link": "/sailormoonlip",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Star Wars Charm Bracelet",
     "price": 19.88,
     "desc": "",
     "category": "jewelry",
     "image": "starwarsbracelet",
-    "alt-image": "",
     "link": "/starwarsbracelet",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Star Wars Makeup Brush Set",
     "price": 12.99,
     "desc": "",
     "category": "cosmetics",
     "image": "starwarsbrushes",
-    "alt-image": "",
     "link": "/starwarsbrushes",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Thor Helmet Necklace",
     "price": 34.99,
     "desc": "",
     "category": "jewelry",
     "image": "thornecklace",
-    "alt-image": "",
     "link": "/thornecklace",
     "cart": false,
     "quant": 0
-  } , {
+  },
+  {
     "product": "Wonder Woman Bomber Jacket",
     "price": 39.99,
     "desc": "",
