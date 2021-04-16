@@ -30,6 +30,17 @@ const Routes = () => {
     }
   };
 
+  const removeFromCart = (item) => {
+    const prod = Catalog.filter((e) => e.image === item.image);
+    const index = cart.indexOf(prod[0]);
+    if (index > -1) {
+      cart.splice(index, 1);
+    }
+    const cartNumb = document.querySelector("#cartNumb");
+    const numb = Number(cartNumb.textContent);
+    cartNumb.textContent = numb - 1;
+  };
+
   return (
     <BrowserRouter>
       <Switch>
@@ -41,7 +52,11 @@ const Routes = () => {
           path="/Cosmetics"
           render={() => <Cosmetics cart={cart} />}
         />
-        <Route exact path="/Cart" render={() => <Cart cart={cart} />} />
+        <Route
+          exact
+          path="/Cart"
+          render={() => <Cart cart={cart} removeFromCart={removeFromCart} />}
+        />
         <Route
           exact
           path="/:id"
