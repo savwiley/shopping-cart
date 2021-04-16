@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Catalog from "./components/catalog.json";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
@@ -7,6 +7,9 @@ import Footer from "./components/footer.js";
 const Product = ({ addToCart, cart }) => {
   let { id } = useParams();
   const quant = useRef(1);
+
+  //always opens to top of page
+  window.scrollTo(0, 0);
 
   //brings up correct product using params
   const filterArr = (image) => {
@@ -54,6 +57,7 @@ const Product = ({ addToCart, cart }) => {
   useEffect(() => {
     const btn = document.querySelector(".addCart");
     const cartNumb = document.querySelector("#cartNumb");
+    const checkBtn = document.querySelector(".goCheckout");
 
     const addCart = (item, qty) => {
       const cartList = cart.find((e) => e.image === item[0].image);
@@ -62,6 +66,7 @@ const Product = ({ addToCart, cart }) => {
         cartNumb.textContent = numb + 1;
       }
       addToCart(item, qty);
+      checkBtn.style.visibility = "visible";
     };
 
     if (btn) {
@@ -101,6 +106,9 @@ const Product = ({ addToCart, cart }) => {
             </div>
 
             <button className="addCart">Add to Cart</button>
+            <Link to="/Cart" className="goCheckout">
+              Go to Checkout
+            </Link>
           </div>
         </div>
       ))}
