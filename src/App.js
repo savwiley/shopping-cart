@@ -2,16 +2,11 @@ import React from "react";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
 import Items from "./components/itemPage.js";
-//import Routes from "./Routes.js";
 
-
-function App() {
-  
-
+function App(cart) {
   return (
     <div className="main">
-
-      <NavBar />
+      <NavBar cart={cart.cart} />
 
       <div className="header">
         <div id="blurb">
@@ -21,7 +16,7 @@ function App() {
       </div>
 
       <div id="product-section">
-        <Items filter={"all"}/>
+        <Items filter={"all"} />
       </div>
 
       <Footer />
@@ -30,7 +25,6 @@ function App() {
 }
 
 export default App;
-
 
 /**
  * https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/shopping-cart
