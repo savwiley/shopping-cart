@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import App from "./App.js";
 import Apparel from "./Apparel.js";
 import Jewelry from "./Jewelry.js";
@@ -42,7 +42,7 @@ const Routes = () => {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <Switch>
         <Route exact path="/" render={() => <App cart={cart} />} />
         <Route exact path="/Apparel" render={() => <Apparel cart={cart} />} />
@@ -63,7 +63,7 @@ const Routes = () => {
           render={() => <Product cart={cart} addToCart={addToCart} />}
         />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
