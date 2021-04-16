@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import Catalog from "./components/catalog.json";
 import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
-//import CartBtn from "./components/cartBtn";
-//import Routes from "./Routes";
 
-const Product = ({ addToCart }) => {
+const Product = ({ addToCart, cart }) => {
   let { id } = useParams();
   const quant = useRef(1);
 
@@ -16,7 +14,7 @@ const Product = ({ addToCart }) => {
     if (image === id) {
       return arr.push(image);
     }
-  }
+  };
   let product = Catalog.filter((e) => {
     return filterArr(e.image);
   });
@@ -33,15 +31,15 @@ const Product = ({ addToCart }) => {
       } else if (add && dom === "add") {
         numb += 1;
       } else if (sub && dom === "sub") {
-        if ( numb > 0) {
+        if (numb > 0) {
           numb -= 1;
-        };
-      };
+        }
+      }
 
       quant.current = numb;
       input.value = quant.current;
-    }
-    
+    };
+
     input.addEventListener("change", () => {
       changeQuant("change");
     });
@@ -55,74 +53,61 @@ const Product = ({ addToCart }) => {
 
   useEffect(() => {
     const btn = document.querySelector(".addCart");
+    const cartNumb = document.querySelector("#cartNumb");
 
     const addCart = (item, qty) => {
+      const cartList = cart.find((e) => e.image === item[0].image);
+      if (!cartList) {
+        const numb = Number(cartNumb.textContent);
+        cartNumb.textContent = numb + 1;
+      }
       addToCart(item, qty);
-    }
+    };
 
     if (btn) {
       btn.addEventListener("click", () => {
-        addCart(product, quant)
-      })
+        addCart(product, quant);
+      });
     }
-  })
-
+  });
 
   return (
-    <>
+    <div className="main">
+      <NavBar cart={cart} />
 
-      <NavBar />
-
-        {product.map((e) => (
-          <div className="prodMain"
-          key={e.image}>
+      {product.map((e) => (
+        <div className="prodMain" key={e.image}>
+          <div className="prod-image">
             <div
-            id="prodImage"
-            style={{
-              backgroundImage: `url(https://raw.githubusercontent.com/savwiley/shopping-cart/master/src/images/${e.image}.jpg)`,
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}>
-            </div>
-
-            <div id="prodInfo">
-              <span id="prodName">
-                {e.product}
-              </span>
-              <span id="prodDesc">
-                {e.desc}
-              </span>
-              <span id="prodPrice">
-                ${e.price}
-              </span>
-
-              <div className="quantity">
-                <button id="subBtn">-</button>
-                <input id="inputQ" type="number" defaultValue={1} />
-                <button id="addBtn">+</button>
-              </div>
-
-              <button
-                className="addCart">
-                  Add to Cart
-              </button>
-
-            </div>
+              id="prodImage"
+              style={{
+                backgroundImage: `url(https://raw.githubusercontent.com/savwiley/shopping-cart/master/src/images/${e.image}.jpg)`,
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
           </div>
-        ))}
+
+          <div id="prodInfo">
+            <span id="prodName">{e.product}</span>
+            <span id="prodDesc">{e.desc}</span>
+            <span id="prodPrice">${e.price}</span>
+
+            <div className="quantity">
+              <button id="subBtn">-</button>
+              <input id="inputQ" type="number" defaultValue={1} />
+              <button id="addBtn">+</button>
+            </div>
+
+            <button className="addCart">Add to Cart</button>
+          </div>
+        </div>
+      ))}
 
       <Footer />
-
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default Product;
-
-
-/**Product Page
- * 
- * a list of items can be found in catalog.json
- * include name, image, price, +/- quantity, cart btn, desc
- */
