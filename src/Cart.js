@@ -3,12 +3,23 @@ import NavBar from "./components/navBar.js";
 import Footer from "./components/footer.js";
 import CartItem from "./components/cartItem.js";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, removeFromCart }) => {
   let total;
+
+  //always opens to top of page
+  window.scrollTo(0, 0);
+
   if (cart.length > 0) {
     const quantTotals = cart.map((e) => e.price * e.quant);
     const reducer = (accu, val) => accu + val;
     total = quantTotals.reduce(reducer);
+  }
+
+  const rmBtn = document.querySelector("#rmCart");
+  if (rmBtn) {
+    rmBtn.addEventListener("click", () => {
+      console.log("I work!");
+    });
   }
 
   return (
@@ -16,7 +27,7 @@ const Cart = ({ cart }) => {
       <NavBar cart={cart} />
 
       <div id="product-section" className="subsection">
-        <CartItem cart={cart} />
+        <CartItem cart={cart} removeFromCart={removeFromCart} />
       </div>
 
       <div id="priceTotal">
