@@ -15,13 +15,6 @@ const Cart = ({ cart, removeFromCart }) => {
     total = quantTotals.reduce(reducer);
   }
 
-  const rmBtn = document.querySelector("#rmCart");
-  if (rmBtn) {
-    rmBtn.addEventListener("click", () => {
-      console.log("I work!");
-    });
-  }
-
   return (
     <div className="main">
       <NavBar cart={cart} />
