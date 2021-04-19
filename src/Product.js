@@ -22,11 +22,15 @@ const Product = ({ addToCart, cart }) => {
     return filterArr(e.image);
   });
 
+  /**
+   * change numb & defaultValue to current quantity
+   */
+
   useEffect(() => {
     const input = document.querySelector("#inputQ");
     const add = document.querySelector("#addBtn");
     const sub = document.querySelector("#subBtn");
-    let numb = 1;
+    let numb = product[0].quant;
 
     const changeQuant = (dom) => {
       if (input && dom === "change") {
@@ -63,7 +67,7 @@ const Product = ({ addToCart, cart }) => {
       const cartList = cart.find((e) => e.image === item[0].image);
       if (!cartList) {
         const numb = Number(cartNumb.textContent);
-        cartNumb.textContent = numb + 1;
+        cartNumb.textContent = numb + qty.current;
       }
       addToCart(item, qty);
       checkBtn.style.visibility = "visible";
@@ -101,7 +105,7 @@ const Product = ({ addToCart, cart }) => {
 
             <div className="quantity">
               <button id="subBtn">-</button>
-              <input id="inputQ" type="number" defaultValue={1} />
+              <input id="inputQ" type="number" defaultValue={e.quant} />
               <button id="addBtn">+</button>
             </div>
 
