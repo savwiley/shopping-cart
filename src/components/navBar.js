@@ -6,6 +6,14 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 const NavBar = (props) => {
   const { cart } = props;
 
+  let total = 0;
+
+  if (cart.length > 0) {
+    const quantTotals = cart.map((e) => e.quant);
+    const reducer = (accu, val) => accu + val;
+    total = quantTotals.reduce(reducer);
+  }
+
   return (
     <div className="navBar">
       <div id="brand">
@@ -18,7 +26,7 @@ const NavBar = (props) => {
         <Link to="/Cosmetics">Cosmetics</Link>
         <Link to="/Cart">
           <FontAwesomeIcon icon={faShoppingCart} />(
-          <span id="cartNumb">{cart.length}</span>)
+          <span id="cartNumb">{total}</span>)
         </Link>
       </div>
     </div>

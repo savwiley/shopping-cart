@@ -15,18 +15,31 @@ const Routes = () => {
     const prod = Catalog.filter((e) => e.image === item[0].image);
 
     if (cart.find((e) => e.image === prod[0].image)) {
+      //if current cart item qty is 0, this removes it
+      if (qty.current === 0) {
+        const index = cart.indexOf(prod[0]);
+        if (index > -1) {
+          cart.splice(index, 1);
+        }
+        const cartNumb = document.querySelector("#cartNumb");
+        const numb = Number(cartNumb.textContent);
+        cartNumb.textContent = numb - 1;
+      }
       //if item is already in the cart, this changes just the quantity
       let newProd = [...cart];
       let prodIndex = cart.findIndex((e) => e.image === prod[0].image);
-
       newProd[prodIndex] = { ...newProd[prodIndex], quant: qty.current };
-
       cart = newProd;
+      prod[0].quant = qty.current;
     } else {
       //if item isn't in the cart, this adds it
       prod[0].cart = true;
       prod[0].quant = qty.current;
       cart.push(prod[0]);
+
+      /**
+       * Alternatively, in retrospect, I could use just the catalog instead of making a whole new "cart" array. By changing the cart key to true, I could filter through the items without needing a separate array. I could even remove items from the cart by forcing the quant to 0. However, the current code is already in place. This is just a note to keep in mind for the future.
+       */
     }
   };
 
@@ -38,7 +51,7 @@ const Routes = () => {
     }
     const cartNumb = document.querySelector("#cartNumb");
     const numb = Number(cartNumb.textContent);
-    cartNumb.textContent = numb - 1;
+    cartNumb.textContent = numb - item.quant;
   };
 
   return (
