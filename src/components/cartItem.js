@@ -6,6 +6,7 @@ const CartItem = (props) => {
 
   const removeCart = (item) => {
     const block = document.querySelector(`#${item.image}`);
+    const itemTotal = item.price * item.quant;
     if (block) {
       block.remove();
     }
@@ -13,7 +14,6 @@ const CartItem = (props) => {
 
     const totalDiv = document.querySelector("#priceTotal");
     const total = Number(totalDiv.textContent.slice(8));
-    const itemTotal = item.price * item.quant;
     const newTotal = (total - itemTotal).toFixed(2);
     totalDiv.textContent = `Total: $${newTotal}`;
 
