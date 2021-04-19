@@ -64,10 +64,12 @@ const Product = ({ addToCart, cart }) => {
     const checkBtn = document.querySelector(".goCheckout");
 
     const addCart = (item, qty) => {
+      const numb = Number(cartNumb.textContent);
       const cartList = cart.find((e) => e.image === item[0].image);
       if (!cartList) {
-        const numb = Number(cartNumb.textContent);
         cartNumb.textContent = numb + qty.current;
+      } else {
+        cartNumb.textContent = (numb - cartList.quant) + qty.current;
       }
       addToCart(item, qty);
       checkBtn.style.visibility = "visible";
