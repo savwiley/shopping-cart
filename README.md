@@ -10,7 +10,7 @@ This site was made with [ReactJS ^17.0.2](https://reactjs.org/) & [React Router 
 
 Images provided by [FontAwesome](https://fontawesome.com/),  [Amazon](https://www.amazon.com/), & [Pexels](https://www.pexels.com/photo/woman-in-yellow-and-black-sleeveless-shirt-wearing-black-and-white-cap-4389987/).
 
-Fonts 'Josefin Sans' & 'Roboto from [Google Fonts](fonts.google.com).
+Fonts 'Josefin Sans' & 'Roboto' from [Google Fonts](fonts.google.com).
 
 Code formatted by [Prettier](https://prettier.io/).
 
