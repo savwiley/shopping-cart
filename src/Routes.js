@@ -18,12 +18,17 @@ const Routes = () => {
       //if current cart item qty is 0, this removes it
       if (qty.current === 0) {
         const index = cart.indexOf(prod[0]);
-        if (index > -1) {
+        if (index < 1) {
           cart.splice(index, 1);
         }
         const cartNumb = document.querySelector("#cartNumb");
         const numb = Number(cartNumb.textContent);
-        cartNumb.textContent = numb - 1;
+        const sum = numb - item.quant;
+        if (sum) {
+          cartNumb.textContent = sum;
+        } else {
+          cartNumb.textContent = 0;
+        }
       }
       //if item is already in the cart, this changes just the quantity
       let newProd = [...cart];
@@ -52,6 +57,8 @@ const Routes = () => {
     const cartNumb = document.querySelector("#cartNumb");
     const numb = Number(cartNumb.textContent);
     cartNumb.textContent = numb - item.quant;
+    prod[0].cart = false;
+    prod[0].quant = 0;
   };
 
   return (
