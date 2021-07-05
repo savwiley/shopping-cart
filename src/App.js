@@ -14,7 +14,7 @@ function App(cart) {
       <div className="header">
         <div id="blurb">
           <span id="head">Girl Wonder</span>
-          <span>Fasion For Us</span>
+          <span>Fashion For Us</span>
         </div>
       </div>
 
